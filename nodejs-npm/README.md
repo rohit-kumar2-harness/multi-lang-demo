@@ -24,7 +24,6 @@ This project includes specific dependency versions to test various SSCA (Softwar
 |---------|---------|------|---------------|
 | `lodash` | 4.17.15 | 3 | **Partial remediation path**: 4.17.15 (3 CVEs) → 4.17.21 (0 CVEs) |
 | `follow-redirects` | 1.14.1 | 4 | **Multiple vulnerabilities**: Information exposure & SSRF CVEs, tests bulk vulnerability listing |
-| `axios` | 0.21.1 | 4 | **Multiple CVEs**: SSRF, ReDoS vulnerabilities |
 | `minimist` | 1.2.5 | 1 | **Prototype pollution**: Common transitive dependency vulnerability |
 | `jsonwebtoken` | 8.5.1 | 3 | **Auth library CVEs**: Security-sensitive package with multiple CVEs |
 | `moment` | 2.29.1 | 2 | **Deprecated package**: Tests handling of unmaintained packages with CVEs |
