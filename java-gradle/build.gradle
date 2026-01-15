@@ -1,0 +1,25 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+group = 'com.demo'
+version = '1.0.0'
+sourceCompatibility = '11'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'com.sparkjava:spark-core:2.9.4'
+    implementation 'org.slf4j:slf4j-simple:1.7.36'
+}
+
+application {
+    mainClass = 'com.demo.App'
+}
+
+tasks.named('run') {
+    standardInput = System.in
+}
