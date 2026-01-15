@@ -23,7 +23,7 @@ This project includes specific dependency versions to test various SSCA (Softwar
 | Package | Version | CVEs | Test Scenario |
 |---------|---------|------|---------------|
 | `lodash` | 4.17.15 | 3 | **Partial remediation path**: 4.17.15 (3 CVEs) → 4.17.21 (0 CVEs) |
-| `tar` | 6.1.0 | 6 | **Multiple vulnerabilities**: High CVE count, tests bulk vulnerability listing & pagination |
+| `follow-redirects` | 1.14.1 | 4 | **Multiple vulnerabilities**: Information exposure & SSRF CVEs, tests bulk vulnerability listing |
 | `axios` | 0.21.1 | 4 | **Multiple CVEs**: SSRF, ReDoS vulnerabilities |
 | `minimist` | 1.2.5 | 1 | **Prototype pollution**: Common transitive dependency vulnerability |
 | `jsonwebtoken` | 8.5.1 | 3 | **Auth library CVEs**: Security-sensitive package with multiple CVEs |
@@ -45,7 +45,7 @@ This project includes specific dependency versions to test various SSCA (Softwar
 
 1. **Simple fix available**: `minimist` 1.2.5 → 1.2.6 fixes the CVE
 2. **Partial fix path**: `lodash` requires multiple upgrades to fully remediate
-3. **Multiple CVEs single package**: `tar` 6.1.0 has 6 CVEs with different fix versions
+3. **Multiple CVEs single package**: `follow-redirects` 1.14.7 has 4 CVEs with different fix versions
 4. **Deprecated with no fix**: `moment` is deprecated, alternative package recommended
 5. **Clean component**: `uuid` has no vulnerabilities for baseline testing
 
@@ -62,7 +62,7 @@ This project includes specific dependency versions to test various SSCA (Softwar
 
 ### Pagination Test Cases
 
-- `tar` (6 CVEs) and `node-forge` (6 CVEs) - Test pagination with `limit=2, page=0,1,2`
+- `follow-redirects` (4 CVEs) and `node-forge` (6 CVEs) - Test pagination with `limit=2, page=0,1,2`
 - `lodash` (3 CVEs) - Test pagination boundary with `limit=2, page=0,1`
 - `uuid` (0 CVEs) - Test empty results pagination
 
@@ -74,7 +74,7 @@ Based on `RemediationValidationServiceImpl.java` validation scenarios:
 |-----------------|---------|----------|
 | **CAN_REMEDIATE** | `lodash@4.17.15` | Has 3 CVEs, not latest, can upgrade to 4.17.21 |
 | **ALREADY_LATEST_VERSION** | `chokidar@5.0.0`, `uuid@13.0.0` | Latest versions, no upgrade needed |
-| **OUTDATED_VULNERABLE** | `tar@6.1.0` | Outdated with 6 CVEs, can remediate with warning |
+| **OUTDATED_VULNERABLE** | `follow-redirects@1.14.7` | Outdated with 4 CVEs, can remediate with warning |
 | **OUTDATED_NON_VULNERABLE** | `core-js@3.27.0` | Outdated (3.27.0 vs 3.47.0), no CVEs, info message |
 | **UNMAINTAINED_VULNERABLE** | `moment@2.29.1`, `request@2.85.0` | Deprecated with CVEs, cannot remediate |
 | **EOL_VULNERABLE** | `angular@1.8.3` | AngularJS EOL Dec 2021, 9 CVEs, no fixes coming |
