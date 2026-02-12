@@ -14,6 +14,27 @@ repositories {
 dependencies {
     implementation 'com.sparkjava:spark-core:2.9.4'
     implementation 'org.slf4j:slf4j-simple:1.7.36'
+
+    // 1. Latest versions
+    implementation 'com.github.ben-manes.caffeine:caffeine:3.2.3'
+    implementation 'io.netty:netty-all:4.1.108.Final'
+    implementation 'io.lettuce:lettuce-core:6.5.4.RELEASE'
+
+    // 2. Outdated but not more than 2 years old
+    implementation 'org.postgresql:postgresql:42.6.0'
+    implementation 'com.mysql:mysql-connector-j:8.0.33'
+    implementation 'io.github.resilience4j:resilience4j-core:2.1.0'
+
+    // 3. Outdated and vulnerable, version released around 1 year ago
+    implementation 'com.thoughtworks.xstream:xstream:1.4.20'
+    implementation 'org.codehaus.jettison:jettison:1.5.4'
+    implementation 'xerces:xercesImpl:2.12.2'
+
+    // 4. Version released more than 2 years ago
+    implementation 'org.json:json:20200518'
+    implementation 'com.opencsv:opencsv:4.2'
+    implementation 'com.zaxxer:HikariCP:5.0.1'
+    testImplementation 'cglib:cglib:3.2.12'
 }
 
 application {

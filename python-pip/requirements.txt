@@ -1,2 +1,22 @@
 Flask==2.3.2
-Werkzeug==2.3.6
+Werkzeug==2.3.3
+
+# 1. Latest versions
+requests==2.32.4
+httpx==0.28.1
+pydantic==2.10.4
+
+# 2. Outdated but not more than 2 years old
+urllib3==2.0.7
+boto3==1.28.85
+Pillow==9.5.0
+
+# 3. Outdated and vulnerable, version released around 1 year ago
+Jinja2==3.1.2
+cryptography==41.0.5
+PyYAML==5.3.1
+
+# 4. Version released more than 2 years ago
+six==1.15.0
+certifi==2020.4.5.2
+idna==2.10
