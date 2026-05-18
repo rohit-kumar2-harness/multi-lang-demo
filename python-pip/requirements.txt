@@ -2,7 +2,7 @@ Flask==2.3.2
 Werkzeug==2.3.3
 
 # 1. Latest versions
-requests==2.32.4
+requests==2.34.2
 httpx==0.28.1
 pydantic==2.10.4
 
