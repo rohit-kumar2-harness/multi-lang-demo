@@ -8,7 +8,7 @@ pydantic==2.10.4
 
 # 2. Outdated but not more than 2 years old
 urllib3==2.0.7
-boto3==1.28.85
+boto3==1.43.18
 Pillow==9.5.0
 
 # 3. Outdated and vulnerable, version released around 1 year ago
